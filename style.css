@@ -1,0 +1,74 @@
+body {
+	background: #f7f7f7;
+}
+
+.loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.loading li {
+	position: absolute;
+	top: 0;
+	height: 12px;
+	width: 12px;
+	padding: 0;
+	margin: 0;
+	border-radius: 50%;
+	background: #0067b8;
+}
+
+.loading li.one {
+	left: -15px;
+	animation: loading-animated 3s ease-in-out infinite;
+}
+
+.loading li.two {
+	left: 0;
+	animation: loading-animated 3s ease-in-out infinite;
+}
+
+.loading li.three {
+	left: 15px;
+	animation: loading-animated 3s ease-in-out 0.5s infinite;
+}
+
+.loading li.four {
+	left: 30px;
+	animation: loading-animated 3s ease-in-out 0.5s infinite;
+}
+
+@keyframes loading-animated {
+	from {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1
+	}
+
+	35% {
+		transform: translateX(0);
+	}
+
+	65% {
+		transform: translateX(0);
+	}
+
+	75% {
+		opacity: 1
+	}
+
+	to {
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+}
+
+/* Developed By SeyedMohammadMahdi Kiaei */
